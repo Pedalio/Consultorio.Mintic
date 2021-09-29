@@ -1,7 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import viewsets
+from Citas.serializers import *
 
-# => Lógica del backend
-def vistaEjemplo(request):
-    #request -> contiene la información del usuario
-    return HttpResponse("Estas en la aplicación de 'Servicios' ")
+class CitasAPI(viewsets.ModelViewSet):
+    serializer_class=CitasSerial
+    queryset=Citas.objects.all()

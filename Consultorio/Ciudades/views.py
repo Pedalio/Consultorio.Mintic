@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from Ciudades.serializers import CiudadesSerial
+from rest_framework import viewsets
+from Ciudades.models import *
 
-# Create your views here.
+class CiudadesAPI(viewsets.ModelViewSet):
+    serializer_class=CiudadesSerial
+    queryset=ciudades.objects.all()

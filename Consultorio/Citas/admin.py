@@ -1,4 +1,4 @@
-from Ciudades.models import Ciudades
+from Ciudades.models import ciudades
 from django.contrib import admin
 from Citas.models import *
 from Ciudades.models import *
@@ -17,7 +17,7 @@ admin.site.register(LugarCita)
 admin.site.register(Pacientes)
 admin.site.register(Medicos)
 admin.site.register(Citas)
-admin.site.register(Ciudades)
+admin.site.register(ciudades)
 admin.site.register(DiaSemana)
 admin.site.register(HorasCitasDiarias)
 admin.site.register(tipoCita)

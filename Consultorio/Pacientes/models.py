@@ -9,7 +9,7 @@ class Pacientes(models.Model):
     #telefono=models.ForeignKey(telefono, on_delete=models.CASCADE)
     telefono = models.CharField(max_length=50) #Crear class
     direccion = models.CharField(max_length=50)
-    email=models.EmailField()
+    correo=models.EmailField()
     edad=models.IntegerField(default=1) #Enviar alertas segun la edad
     tipoUsuario=models.ForeignKey(TipoCategoria, on_delete=models.CASCADE)
 

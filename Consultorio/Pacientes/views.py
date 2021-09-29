@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from Pacientes.serializers import *
 
-# Create your views here.
+class PacientesAPI(viewsets.ModelViewSet):
+    serializer_class=PacientesSerial
+    queryset=Pacientes.objects.all()

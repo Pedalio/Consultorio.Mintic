@@ -28,7 +28,7 @@ class Medicos(models.Model):
     #telefono = models.ForeignKey(telefono, on_delete=models.CASCADE)
     telefono = models.CharField(max_length=50)
     direccion = models.CharField(max_length=50)
-    email = models.EmailField(blank=True, null=True)
+    correo = models.EmailField(blank=True, null=True)
     edad = models.IntegerField(default=1, blank=True, null=True)
     horariosDisponibles = models.DateTimeField(auto_now_add=True)
     #horariosDisponibles=models.ForeignKey(HorasCitasDiarias, on_delete=models.CASCADE)

@@ -43,8 +43,22 @@ INSTALLED_APPS = [
     'Medicos',
     'Pacientes',
     'TipoCategoria',
-    'TipoCitas'
+    'TipoCitas',
+#Esta linea hace parte de los Serializadores
+    'rest_framework',
+    'rest_framework.authtoken'
 ]
+
+#-----------------------------
+#Linea para poder serializar
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES' : [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication', 
+    ]
+}
+
+#-----------------------------
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
