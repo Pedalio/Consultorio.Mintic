@@ -37,8 +37,28 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Citas'
+    'Citas',
+    'Ciudades',
+    'LugarCitas',
+    'Medicos',
+    'Pacientes',
+    'TipoCategoria',
+    'TipoCitas',
+#Esta linea hace parte de los Serializadores
+    'rest_framework',
+    'rest_framework.authtoken'
 ]
+
+#-----------------------------
+#Linea para poder serializar
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES' : [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication', 
+    ]
+}
+
+#-----------------------------
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,7 +97,7 @@ WSGI_APPLICATION = 'Consultorio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db.ConsultorioOnline',
     }
 }
 
